@@ -40,6 +40,10 @@
 // Create "Question Bank" of questions to present to user store them in an array that can be traversed randomly to
 // ask user a question.
 
+var arrQuestions = ["Question1", "Question2", "Question3", "Question4", "Question5", "Question6", "Question7", "Question8", "Question9", "Question10"];
+
+
+
 
 
 
@@ -48,8 +52,12 @@
 
 
 
+var arrAnswers = ["Answer1", "Answer2", "Answer3", "Answer4", "Answer5", "Answer6", "Answer7", "Answer8", "Answer9", "Answer10"];
 
 
+// Storage of user responses
+
+var userAnswer;
 
 
 
