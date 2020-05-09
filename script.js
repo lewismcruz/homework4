@@ -43,8 +43,25 @@
 var arrQuestions = ["Question1", "Question2", "Question3", "Question4", "Question5", "Question6", "Question7", "Question8", "Question9", "Question10"];
 
 
+// Question 1 = Commonly used data types DO NOT include:
 
 
+// Question 2 = The condition in an if / else statement is enclosed within_.
+
+// Question 3 = Arrays in JavaScript can be used to store:
+
+// Question 4 = String values must be enclosed within_____ when being assigned to variables.
+
+// Question 5 = A very useful tool used during development and debugging for printing content to the debugger is:
+
+// *********************************
+// Final Screen is:
+
+// All Done!
+// Your final score is 22.
+// Enter your initials:    
+// Submit button
+// *********************************
 
 
 
