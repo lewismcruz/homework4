@@ -101,9 +101,10 @@ var arrQuestionAnswer = {
 var arrWrongAnswerQuestion1 = [arrAnswers[0], arrAnswers[1], arrAnswers[3]];
 var arrWrongAnswerQuestion2 = [arrAnswers[4], arrAnswers[6], arrAnswers[7]];
 var arrWrongAnswerQuestion3 = [arrAnswers[8], arrAnswers[9], arrAnswers[10]];
+var arrWrongAnswerQuestion3 = [arrAnswers[12], arrAnswers[13], arrAnswers[14]];
 
-// If question answered in correctly
-// alert("Incorrect answer.  10 seconds off time deducted from the clock.")
+// If question answered incorrectly
+// Take 10 seconds off time deducted from the clock.") Do not need to display notice on screen.
 
 
 if (arrQuestions.Question1) {
