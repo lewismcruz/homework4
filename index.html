@@ -3,26 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Concepts Game</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-
-    <h1>This is a coding game.</h1>
-
-
-    <h1>Coding Quiz Challenge</h1> <!-- Center text on page in your CSS -->
-
-    <p><!-- Center text on page in CSS -->
-      Try to answer the following code-related questions within the time<br>
-      limit. Keep in mind that incorrect answers will penalize your score/time<br>
-      by ten seconds!
-
-    </p>
+      
+    <div class="wrapper">
+      <header>
+        <!-- Center text on page in your CSS -->
+        <h1>Coding Quiz Challenge</h1> 
+      </header>
+      <div class="card">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="gameintro"
+            placeholder="JavaScript Coding Concepts Quiz"
+            aria-label=" Try to answer the following code-related questions within the time<br>
+            limit. Keep in mind that incorrect answers will penalize your score/time<br>
+            by ten seconds!"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Start Quiz</button>
+        </div>
+       </div>
+    </div>
+    <script src="./script.js"></script>
     
-<!-- Display button -->
-<!-- Start Quiz -->
-
-
 </body>
 </html>
