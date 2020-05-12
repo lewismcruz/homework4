@@ -16,18 +16,36 @@ var arrAnswers;
 var arrQuestions;
 var arrQuestionAnswer;
 var userAnswer;
-var userInitials
-var userScore
-var topScore
+var userInitials;
+var userScore;
+var topScore;
+var counter;
 
+var buttonClickAction = document.querySelector("#startButton");
+
+buttonClickAction.addEventListener("click", function () {
+    console.log("This has been clicked.");
+})                                                                                            
 
 // Click a start button
 // Use code from Password Generator homework assignment here to create button on page
 
-generateButton.addEventListener("click", startGame);
 
+// Need to figure out how to work with event listener for click button action.
+
+// buttonClickAction.addEventListener("click", startGame);
+// generateBtn.addEventListener("click", startGame);
+console.log("Game will now start")
 // Start a timer and present the first question
      // Start timer and game on buttonclick of Start Quiz button
+
+
+
+
+
+/*
+################################################################################
+Step through code to finish final conditions and statements to complete quiz.
 
 var timeEl = document.querySelector(".time");
 
@@ -91,7 +109,7 @@ var arrAnswers = ["strings", "booleans", "alerts", "numbers", "quotes", "curly b
 // Using a datatype
 // Use an object in JavaScript
 
-var arrQuestionAnswer = {
+var arrQuestion1 = {
     "Commonly used data types DO NOT include:" : "alert",    
     "The condition in an if / else statement is enclosed within______." : "curly brackets",
     "Arrays in JavaScript can be used to store:" : "All of the above",
@@ -107,10 +125,88 @@ var arrWrongAnswerQuestion3 = [arrAnswers[12], arrAnswers[13], arrAnswers[14]];
 // Take 10 seconds off time deducted from the clock.") Do not need to display notice on screen.
 
 
-if (arrQuestions.Question1) {
-    var userQuestion1Answer = "Choice 1.";
-    var answerCorrect = arrQuestions[]
+if (arrQuestions.Question1 === arrQuestionAnswer["alert"]) {
+    var userQuestion1Answer = 1;
+}
+else {
+    var userQuestion1Answer = 0;
+    // output "Wrong answer" on screen placeholder <div>
+}
 
+if (arrQuestions.Question2 === arrQuestionAnswer["curly brackets"]) {
+    var userQuestion2Answer = 1;
+}
+else {
+    var userQuestion2Answer = 0;
+    // output "Wrong answer" on screen placeholder <div>
+}
+
+if (arrQuestions.Question3 === arrQuestionAnswer["All of the above"]) {
+    var userQuestion2Answer = 1;
+}
+else {
+    var userQuestion3Answer = 0;
+    // output "Wrong answer" on screen placeholder <div>
+}
+
+if (arrQuestions.Question4 === arrQuestionAnswer["curly brackets"]) {
+    var userQuestion2Answer = 1;
+}
+else {
+    var userQuestion4Answer = 0;
+    // output "Wrong answer" on screen placeholder <div>
+}
+
+*/
+
+// Use this array for questions!!! 
+var arrQuestions = [
+   {
+       question : "Commonly used data types DO NOT include:",
+       correctAnswer : "alerts",
+       "otherChoices" : ["strings","booleans","numbers"],
+   },
+   {
+       question : "The condition in an if / else statement is enclosed within______.",
+       correctAnswer : "curly brackets",
+       "otherChoices" : ["quotes", "parenthesis", "square brackets"],
+   },
+   {
+       question : "Arrays in JavaScript can be used to store:",
+       correctAnswer : "All of the above",  
+       "otherChoices" : ["numbers and strings", "other arrays", "booleans"],
+   },
+   {
+       question : "A very useful tool used during development and debugging for printing content to the debugger is:",
+       correctAnswer : "console log",
+       "otherChoices" : ["JavaScript", "terminal/bash", "for loops"],
+    }, 
+
+];
+console.log("line 186");
+console.log(arrQuestions.length);
+/*
+
+for (var i = 0; i < arrQuestions.length; i++) {
+   var userAnswerObj = arrQuestions[i];
+
+
+
+
+
+}
+
+
+var h2El = document.createElement("h2");
+var li1 = document.createElement("li");
+var li2 = document.createElement("li");
+var li3 = document.createElement("li");
+var li4 = document.createElement("li");
+
+var listItems = document.getElementsByTagName("li");
+
+h1El.textContent = (arrQuestions.question[i]);
+li1.textContent = (arrQuestions.)
 
 
 // Looping through Questions array
@@ -141,6 +237,42 @@ for (var i = 0; i < 10; i++) {
 var alpha = "jfiowjeoirj;slkfjaeoifj"
 
 console.log(alpha[Math.floor(Math.random() * alpha.length)])
+
+
+
+
+// Random number generator
+// Loop 10 times
+for (var i = 0; i < 3; i++) {
+    // Generate a random whole number between 8 and 128
+    var num = Math.floor(Math.random() * 3) + 1;
+
+    // Display in console
+    console.log(num);
+}
+
+// Loop through random letters selection through array  
+var arrWrongAnswerQuestion1 = "jfiowjeoirj;slkfjaeoifj"
+
+console.log(alpha[Math.floor(Math.random() * arrWrongAnswerQuestion1.length)])
+
+// Working with arrays using functions
+
+function consoleInside(arr) {
+
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+    console.log("--------");
+
+}
+
+// This is how you call the function 
+
+consoleInside(brands);
+consoleInside(heroes);
+consoleInside(booksOnMyShelf);
+
 
 
 
@@ -182,6 +314,8 @@ var userAnswer;
 
 // When the game is over allow user to save initials and score.
 
+// Save scores and initials to local browser storage for recall -- can be cleared out.
+
 
 
 var userInitials
@@ -192,7 +326,10 @@ var topScore  // for comparison of scores
 // How is the final screen displayed?  Is it a new HTML page with All done! on it or
 // is it JavaScript?
 
-// Is Highscores page a new page?
+// Is Highscores page a new page? -- Yes it is.
 // Highscores simply displays the initials and the score.
 
-console.log(1.userInitials - userScore)   
+// console.log(1.userInitials - userScore)   
+
+
+################################################################################*/
