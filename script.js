@@ -10,7 +10,9 @@
 // ***************** User Story **************
 // Timed quiz on JavaScript fundamentals that stores high scores
 // so I can gauge my progress compared to my peers
-var timeEl;
+
+// Variables
+
 var secondsLeft;
 var arrAnswers;
 var arrQuestions;
@@ -20,181 +22,10 @@ var userInitials;
 var userScore;
 var topScore;
 var counter;
-
-var buttonClickAction = document.querySelector("#startButton");
-
-buttonClickAction.addEventListener("click", function () {
-    console.log("This has been clicked.");
-})                                                                                            
-
-// Click a start button
-// Use code from Password Generator homework assignment here to create button on page
-
-
-// Need to figure out how to work with event listener for click button action.
-
-// buttonClickAction.addEventListener("click", startGame);
-// generateBtn.addEventListener("click", startGame);
-console.log("Game will now start")
-// Start a timer and present the first question
-     // Start timer and game on buttonclick of Start Quiz button
-
-
-
-
-
-/*
-################################################################################
-Step through code to finish final conditions and statements to complete quiz.
-
 var timeEl = document.querySelector(".time");
+var timeP = document.querySelector(".gameover");
 
-
-var secondsLeft = 75;
-
-function setTime() {
-    var timerInterval = setInterval(function() {
-        secondsLeft--;
-        //timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
-
-        if(secondsLeft === 0){
-          clearInterval(timerInterval);
-          sendMessage();
-        }
-    }, 1000);
-}
-
-     // While timer is ticking off need a condition to check for valid answers and for incorrect answers 
-     // need to interrupt while loop to else (wrong answer) condition and decrement timer value variable by
-     // 10000 milliseconds 
-
-
-     // Final condition to be met to stop the game is checking if all questions in the Question Array 
-     // were answered.
-
-// Answer the question then present another question
-
-
-
-
-// Create "Question Bank" of questions to present to user store them in an array that can be traversed randomly to
-// ask user a question.
-
-// Make arrQuestions an array of all questions asked
-
-var arrQuestions = ["Commonly used data types DO NOT include:", "The condition in an if / else statement is enclosed within_.", "Arrays in JavaScript can be used to store:", "String values must be enclosed within_____ when being assigned to variables.", "A very useful tool used during development and debugging for printing content to the debugger is:"];
-
-
-// Question 1 = Commonly used data types DO NOT include:
-
-// Question 2 = The condition in an if / else statement is enclosed within_.
-
-// Question 3 = Arrays in JavaScript can be used to store:
-
-// Question 4 = String values must be enclosed within_____ when being assigned to variables.
-
-// Question 5 = A very useful tool used during development and debugging for printing content to the debugger is:
-
-// Create answer array of correct answers and map it's index to the corresponding question it answers correctly.
-
-// Use JavaScript object and property paring to then pair the correct answer to the corret question
-// and then map/link the correct answer to a button. All incorrect answers are mapped or links to "incorrect or wrong output message."
-
-var arrAnswers = ["strings", "booleans", "alerts", "numbers", "quotes", "curly brackets", "parenthesis", "square brackets", "numbers and strings", "other arrays", "booleans", "all of the above", "JavaScript", "terminal/bash", "for loops", "console log",];
-
-
-// How to maybe relate the 2 arrays of arrAnswers and arrQuestions using JavaScript objects and properties.
-
-// Coupling of a property and a value:
-// Using a datatype
-// Use an object in JavaScript
-
-var arrQuestion1 = {
-    "Commonly used data types DO NOT include:" : "alert",    
-    "The condition in an if / else statement is enclosed within______." : "curly brackets",
-    "Arrays in JavaScript can be used to store:" : "All of the above",
-    "A very useful tool used during development and debugging for printing content to the debugger is:" : "console log",
-}
-
-var arrWrongAnswerQuestion1 = [arrAnswers[0], arrAnswers[1], arrAnswers[3]];
-var arrWrongAnswerQuestion2 = [arrAnswers[4], arrAnswers[6], arrAnswers[7]];
-var arrWrongAnswerQuestion3 = [arrAnswers[8], arrAnswers[9], arrAnswers[10]];
-var arrWrongAnswerQuestion3 = [arrAnswers[12], arrAnswers[13], arrAnswers[14]];
-
-// If question answered incorrectly
-// Take 10 seconds off time deducted from the clock.") Do not need to display notice on screen.
-
-
-if (arrQuestions.Question1 === arrQuestionAnswer["alert"]) {
-    var userQuestion1Answer = 1;
-}
-else {
-    var userQuestion1Answer = 0;
-    // output "Wrong answer" on screen placeholder <div>
-}
-
-if (arrQuestions.Question2 === arrQuestionAnswer["curly brackets"]) {
-    var userQuestion2Answer = 1;
-}
-else {
-    var userQuestion2Answer = 0;
-    // output "Wrong answer" on screen placeholder <div>
-}
-
-if (arrQuestions.Question3 === arrQuestionAnswer["All of the above"]) {
-    var userQuestion2Answer = 1;
-}
-else {
-    var userQuestion3Answer = 0;
-    // output "Wrong answer" on screen placeholder <div>
-}
-
-if (arrQuestions.Question4 === arrQuestionAnswer["curly brackets"]) {
-    var userQuestion2Answer = 1;
-}
-else {
-    var userQuestion4Answer = 0;
-    // output "Wrong answer" on screen placeholder <div>
-}
-
-*/
-
-// Use this array for questions!!! 
-var arrQuestions = [
-   {
-       question : "Commonly used data types DO NOT include:",
-       correctAnswer : "alerts",
-       "otherChoices" : ["strings","booleans","numbers"],
-   },
-   {
-       question : "The condition in an if / else statement is enclosed within______.",
-       correctAnswer : "curly brackets",
-       "otherChoices" : ["quotes", "parenthesis", "square brackets"],
-   },
-   {
-       question : "Arrays in JavaScript can be used to store:",
-       correctAnswer : "All of the above",  
-       "otherChoices" : ["numbers and strings", "other arrays", "booleans"],
-   },
-   {
-       question : "A very useful tool used during development and debugging for printing content to the debugger is:",
-       correctAnswer : "console log",
-       "otherChoices" : ["JavaScript", "terminal/bash", "for loops"],
-    }, 
-
-];
-console.log("line 186");
-console.log(arrQuestions.length);
-/*
-
-for (var i = 0; i < arrQuestions.length; i++) {
-   var userAnswerObj = arrQuestions[i];
-
-
-
-
-
-}
+var body = document.body;
 
 
 var h2El = document.createElement("h2");
@@ -205,8 +36,253 @@ var li4 = document.createElement("li");
 
 var listItems = document.getElementsByTagName("li");
 
-h1El.textContent = (arrQuestions.question[i]);
-li1.textContent = (arrQuestions.)
+
+
+
+
+//var submitEl = document.querySelector("#submit");
+//var initialsInput = document.querySelector("#initials");
+//var submissionResponseEl = document.querySelector("#Question");
+
+//submitEl.addEventListener("click", function(event){
+//    event.preventDefault();
+
+//})
+
+/*
+input this to output "Correct" when user selects correct answer to question
+
+var correctResponse = "Correct" + choiceInput.
+
+ var response = "Thank you for your submission " + nameInput.value + "! We will reach out to you at " + emailInput.value + ".";
+  submissionResponseEl.textContent = response;
+
+*/
+
+     // While timer is ticking off need a condition to check for valid answers and for incorrect answers 
+     // need to interrupt while loop to else (wrong answer) condition and decrement timer value variable by
+     // 10000 milliseconds 
+
+
+// Where does (document).ready go?
+// If you are using jQuery you need to link to jQuery library
+//$(document).ready(function() {
+
+// Need to stop the JavaScript from starting when the page refreshes.
+// Used 'event' inside setTime to then call the event.preventDefault method to keep the browser from refreshing.
+
+    var buttonClickAction = document.querySelector("#startButton");  
+    buttonClickAction.addEventListener("click", function setTime(event) {
+        event.preventDefault();
+    console.log("This has been clicked.");
+    console.log("Game will now start");
+
+// This counter works
+
+    var secondsLeft = 10;
+
+    function setTime() {
+        var timerInterval = setInterval(function() {
+            secondsLeft--;
+            console.log(secondsLeft);
+            timeEl.textContent = "Time: " + secondsLeft;
+            
+
+            if(secondsLeft === 0){
+            clearInterval(timerInterval);
+            sendMessage();
+            }
+        }, 1000);
+    }
+
+    function sendMessage() {
+        
+    timeP.textContent = "Time Gone - Game Over"; 
+    }
+
+    setTime();
+
+    console.log("Starting Question Section.")
+
+        var arrQuestions =  {
+        
+        question : "Commonly used data types DO NOT include:",
+        correctAnswer : "alerts",
+        "otherChoices" : ["strings","booleans","numbers"],
+        
+
+        question : "The condition in an if / else statement is enclosed within______.",
+        correctAnswer : "curly brackets",
+        "otherChoices" : ["quotes", "parenthesis", "square brackets"],
+
+           
+
+        question : "Arrays in JavaScript can be used to store:",
+        correctAnswer : "All of the above",  
+        "otherChoices" : ["numbers and strings", "other arrays", "booleans"],
+
+        
+
+        question : "A very useful tool used during development and debugging for printing content to the debugger is:",
+        correctAnswer : "console log",
+        "otherChoices" : ["JavaScript", "terminal/bash", "for loops"],
+
+        }
+    
+       
+    
+    
+ console.log("Starting choice selection logic.");
+ 
+ console.log(arrQuestions.question);
+ console.log(arrQuestions.correctAnswer);
+ console.log(arrQuestions.question.otherChoices);
+ console.log("outside Array ran");
+
+
+ var score = 0;
+ console.log(score);
+ 
+ for (var i = 0; i < arrQuestions.length; i++) {
+     var choiceSelected = confirm(arrQuestions[i].question);
+     var questionCounter = arrQuestions.length;
+     console.log(choiceSelected);
+     console.log("Choice was selected here.");
+ 
+     if ((choiceSelected === true && arrQuestions[i].correctAnswer === "t") ||
+        (choiceSelected === false && arrQuestions[i].correctAnswer === "f")) {
+        score++;
+        alert("Correct");
+        // Call function to load next set of questions to screen.
+        // function newQuestionLayout() {}
+        choiceSelected
+        }
+        else {
+            alert("Wrong!");
+            secondsLeft === (secondsLeft - 2);
+        }
+    
+      
+     if (questionCounter === 4 && arrQuestions[i].correctAnswer === "t") {
+        alert("Game over.");
+     }
+     alert("You got " + score + "/" + arrQuestions.length);
+     console.log("Line 1000");
+ 
+}
+});
+    console.log("End of Game");
+
+
+    
+     
+ 
+     
+ 
+    
+
+// This counter works *******
+
+// After start button is clicked need to change the buttons to choices and display question.
+// After correct choice is selected need to also need to display "Correct" output to user
+// and then change the question and answers displayed to the next question.
+
+
+
+/* 
+choice1Button.addEventListener("click", startTimer);
+choice2Button.addEventListener("click", pauseTimer);
+choice3Button.addEventListener("click", stopTimer);
+choice4Toggle.addEventListener("change", toggleStatus);
+*/
+
+
+
+
+
+ 
+// Create a function that generates new HTML on the index.html page
+
+/*  
+
+
+function newQuestionLayout() {
+
+    // Create all necessary elements
+var h1El = document.createElement("h1");
+var h2El = document.createElement("h2");
+var li1 = document.createElement("li");
+var li2 = document.createElement("li");
+var li3 = document.createElement("li");
+var li4 = document.createElement("li"); 
+
+// Store our li elements in a variable
+
+
+// Set the text content of relevant elements
+h1El.textConent = "Question" + question[i];
+li1.textContent = "Choice 1" + otherChoices[0];
+li2.textContent = "Choice 2" + otherChoices[1];
+li3.textContent = "Choice 3" + otherChoices[2];
+li4.textContent = "Choice 4" + otherChoices[3];
+
+
+// Append all of the new elements
+listEl.appendChild(li1);
+listEl.appendChild(li2);
+listEl.appendChild(li3);
+listEl.appendChild(li4);
+
+// Style the elements - use Bootstrap styling classes to do this if possible
+listItems[0].setAttribute("style", " color:white; background: #666666; padding: 5px; margin-left: 35px;");
+listItems[1].setAttribute("style", " color:white; background: #777777; padding: 5px; margin-left: 35px;");
+listItems[2].setAttribute("style", " color:white; background: #888888; padding: 5px; margin-left: 35px;");
+listItems[3].setAttribute("style", " color:white; background: #999999; padding: 5px; margin-left: 35px;");
+
+}
+
+*/
+ 
+ 
+ 
+
+/*
+
+// Click a start button
+// Use code from Password Generator homework assignment here to create button on page
+
+
+// Need to figure out how to work with event listener for click button action.
+
+// buttonClickAction.addEventListener("click", startGame);
+// generateBtn.addEventListener("click", startGame);
+
+// Start a timer and present the first question
+     // Start timer and game on buttonclick of Start Quiz button
+
+
+
+
+     // Final condition to be met to stop the game is checking if all questions in the Question Array 
+     // were answered.
+
+// Answer the question then present another question
+
+
+
+
+// Use this array for questions!!! 
+
+
+for (var i = 0; i < arrQuestions.length; i++) {
+   var userAnswerObj = arrQuestions[i];
+
+
+
+
+
+}
+
 
 
 // Looping through Questions array
@@ -293,9 +369,6 @@ consoleInside(booksOnMyShelf);
 
 // Storage of user responses
 
-var userAnswer;
-
-
 // If question answered incorrectly
 // Subtract time from the clock -- take off 10 seconds from timer
 
@@ -315,12 +388,10 @@ var userAnswer;
 // When the game is over allow user to save initials and score.
 
 // Save scores and initials to local browser storage for recall -- can be cleared out.
+// Need to clear out and reset timer
 
 
 
-var userInitials
-var userScore
-var topScore  // for comparison of scores
 
 
 // How is the final screen displayed?  Is it a new HTML page with All done! on it or
@@ -329,7 +400,8 @@ var topScore  // for comparison of scores
 // Is Highscores page a new page? -- Yes it is.
 // Highscores simply displays the initials and the score.
 
-// console.log(1.userInitials - userScore)   
+// console.log(1.userInitials - userScore)
+
+*/
 
 
-################################################################################*/
