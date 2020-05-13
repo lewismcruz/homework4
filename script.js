@@ -1,5 +1,20 @@
 // Coding Game JavaScripts
 
+/*==============================================================
+This code is incomplete:
+
+Was still working on getting arrQuestions to display each set of
+question and correct answer as well as the incorrect answers.
+
+Also the timer breaks on subsequent button clicks to restart the
+game.  The timer works if the game is not restarted.  But if the
+start button is clicked again the timer counts erratically.
+
+
+================================================================*/
+
+
+
 // Build a timed code quiz with multiple-choice questions.
 // App must run in the browser and feature dynamically updated HTML
 // and CSS powered by JavaScript code.
@@ -39,13 +54,8 @@ be called with the player selected the correct answer for each question.
 var body = document.body;
 
 // Create all necessary elements
-var h1El = document.createElement("h1");
-var h2El = document.createElement("h2");
-var infoEl = document.createElement("div");
-var imgEl = document.createElement("img");
+
 var cardBody = document.createElement("div");
-var nameEl = document.createElement("div");
-var favoriteEl = document.createElement("div");
 var listEl = document.createElement("ol");
 var li1 = document.createElement("li");
 var li2 = document.createElement("li");
@@ -56,46 +66,44 @@ var li4 = document.createElement("li");
 var listItems = document.getElementsByTagName("li");
 
 // Set the text content of relevant elements
-h1El.textContent = "Welcome to my page";
-h2El.textContent = "This HTML document was created using JavaScript and Chrome Dev Tools";
-kittenEl.textContent = "This is my kitten";
-nameEl.textContent = "his name is Jax";
-favoriteEl.textContent = "My favorite foods are:";
-li1.textContent = "Chicken Fingers";
-li2.textContent = "Pizza";
-li3.textContent = "Burgers";
-li4.textContent = "Sushi";
+
+
+card-body.textContent = "Question";
+
+
+// This would be the next question presented on page if I can determine how to
+// get the result of arrQuestions[] array for loop to input a new question and
+// answer pair after a player either selects the right asnswer or wrong answer.
+questionEl.textContent = "This would be the next question arrQuestions[]";
+
+// Not able to call the arrQuestions.question.correctAnswer
+// or arrQuestions.question.otherChoice1 or 2 or 3 using object property
+// dot notation.  I think my arrQuestions array is not in the best
+// "object : property" in order to do this now.
+li1.textContent = "Answer Choice 1"; 
+li2.textContent = "Answer Choice 2";
+li3.textContent = "Answer Choice 3";
+li4.textContent = "Answer Choice 4";
         
     
-    // Append all of the new elements
-body.appendChild(h1El);
-body.appendChild(h2El);
-body.appendChild(infoEl);
-infoEl.appendChild(imgEl);
-infoEl.appendChild(kittenEl);
-infoEl.appendChild(nameEl);
-body.appendChild(favoriteEl);
-favoriteEl.appendChild(listEl);
+// Append all of the new elements
+infoEl.appendChild(pEl);
+body.appendChild(questionsEl);
+Quesitons.appendChild(listEl);
 listEl.appendChild(li1);
 listEl.appendChild(li2);
 listEl.appendChild(li3);
 listEl.appendChild(li4);
     
 // Style all of our elements
-h1El.setAttribute("style", "margin:auto; width:50%; text-align:center;");
-h2El.setAttribute("style", "margin:auto; width:100%; text-align:center;");
 infoEl.setAttribute("style", "margin:auto; width:50%; text-align:center;");
-imgEl.setAttribute("src", "http://placekitten.com/200/300");
-imgEl.setAttribute("height", 200);
-imgEl.setAttribute("width", 200);
-nameEl.setAttribute("style", "font-size:25px; text-align:center;");
-kittenEl.setAttribute("style", "font-size:25px; text-align:center;");
-favoriteEl.setAttribute("style", "font-size:20px;");
+card-bodyEl.setAttribute("style", "font-size:25px; text-align:center;");
+questionsEl.setAttribute("style", "font-size:20px;");
 listEl.setAttribute("style", "background:#333333; padding:20px;");
-listItems[0].setAttribute("style", " color:blue; background: #666666; padding: 5px; margin-left: 35px;");
-listItems[1].setAttribute("style", " color:blue; background: #777777; padding: 5px; margin-left: 35px;");
-listItems[2].setAttribute("style", " color:orange; background: #888888; padding: 5px; margin-left: 35px;");
-listItems[3].setAttribute("style", " color:orange; background: #999999; padding: 5px; margin-left: 35px;");
+listItems[0].setAttribute("style", " color:black; background: white; padding: 5px; margin-left: 35px;");
+listItems[1].setAttribute("style", " color:black; background: white; padding: 5px; margin-left: 35px;");
+listItems[2].setAttribute("style", " color:black; background: white; padding: 5px; margin-left: 35px;");
+listItems[3].setAttribute("style", " color:black; background: white; padding: 5px; margin-left: 35px;");
 
 =========================================================================*/
 
@@ -212,7 +220,7 @@ var correctResponse = "Correct" + choiceInput.
         // Call function to load next set of questions to screen.
         // function advanceNextQuestion() 
         // to update page with next queston and choices once correct
-        // choice is selected/condition met.
+        // choice is selected/condition met.    
         choiceSelected
         }
         else {
